@@ -26,8 +26,11 @@ describe("verify the homepage",()=>{
 
         cy.get(hp.sidebarbuttonclose).should("be.visible")
         cy.log("sidebar is closed")
-
     
+    })
+
+    it("verify the menuiteams",()=>{
+        
     })
 
 })
