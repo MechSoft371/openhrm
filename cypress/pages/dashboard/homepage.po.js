@@ -23,6 +23,9 @@ class homepage{
     verifythesidebarclick(){
         cy.get(this.sidebarbutton).click();
     }
+    verifylistmenu(){
+        cy.get(this.listiteam).children().title()
+    }
     
 
 

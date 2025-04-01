@@ -6,7 +6,7 @@ import hp from "../../../pages/dashboard/homepage.po"
 
 describe("verify the homepage",()=>{
 
-    before("login to the application", ()=>{
+    beforeEach("login to the application", ()=>{
         cy.visit('/web/index.php/auth/login');
         cy.url().should("eq", "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         cy.log("url is verified");
@@ -30,7 +30,8 @@ describe("verify the homepage",()=>{
     })
 
     it("verify the menuiteams",()=>{
-        
+        menu= hp.verifylistmenu()
+        cy.log(menu)
     })
 
 })
