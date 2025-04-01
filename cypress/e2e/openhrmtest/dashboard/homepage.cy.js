@@ -18,7 +18,6 @@ describe("verify the homepage",()=>{
     })
 
     it("verify the sidebar button", ()=>{
-        cy.wait(10000) //
         cy.url().then((currentUrl) => {
             cy.log(`Current URL: ${currentUrl}`);
           });
@@ -30,8 +29,7 @@ describe("verify the homepage",()=>{
     })
 
     it("verify the menuiteams",()=>{
-        menu= hp.verifylistmenu()
-        cy.log(menu)
+        hp.verifylistmenu()
     })
 
 })

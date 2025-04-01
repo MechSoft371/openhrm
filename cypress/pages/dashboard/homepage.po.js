@@ -24,7 +24,13 @@ class homepage{
         cy.get(this.sidebarbutton).click();
     }
     verifylistmenu(){
-        cy.get(this.listiteam).children().title()
+        cy.get(this.listiteam)
+        .each(($el) => {
+            this.listiteam.push($el.text().trim());
+        })
+        .then(() => {
+            cy.log('Menu Items:', this.listiteam);
+        });
     }
     
 
