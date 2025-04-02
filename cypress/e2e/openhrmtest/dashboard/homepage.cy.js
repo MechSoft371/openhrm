@@ -30,6 +30,8 @@ describe("verify the homepage",()=>{
 
     it("verify the menuiteams",()=>{
         hp.verifylistmenu()
+
+        cy.log(hp.menuiteam)
     })
 
 })
